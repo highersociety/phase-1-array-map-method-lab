@@ -12,14 +12,12 @@ const tutorials = [
 ];
 
 function titleCased() {
-  return tutorials.map(tutorial => {
-    return tutorial
-      .split(" ")
+  return tutorials.map(title => {
+    return title
+      .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(" ");
+      .join(' ');
   });
 }
 
-module.exports = {
-  titleCased
-};
+module.exports = { titleCased };
