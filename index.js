@@ -12,12 +12,16 @@ const tutorials = [
 ];
 
 function titleCased() {
-  return tutorials.map(title => {
-    return title
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+  return tutorials.map((tutorial) => {
+    return tutorial
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1)) // ← don't lowercase the rest
+      .join(" ");
   });
 }
 
-module.exports = { titleCased };
+
+module.exports = {
+  tutorials,
+  titleCased,
+};
